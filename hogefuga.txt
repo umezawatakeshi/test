@@ -2,3 +2,5 @@ hoge
 fuga
 ほげ
 ふが
+	tab
+        8spaces
