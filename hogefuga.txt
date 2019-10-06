@@ -5,3 +5,4 @@ fuga
 	tab
         8spaces
 インド人
+右に
