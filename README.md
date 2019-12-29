@@ -1,4 +1,4 @@
-Japanese version is [here](README-ja.md) [README-ja.md]
+Japanese version is [here](README-ja.md) [README-ja.md] [./README-ja.md]
 
 # README.md
 
