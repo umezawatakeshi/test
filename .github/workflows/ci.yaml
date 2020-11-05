@@ -10,5 +10,16 @@ jobs:
     steps:
       - run: |
           df -h
+          echo ====
           free -h
+          echo ====
           mount
+          echo ====
+          ls -l /
+          du -sh /*
+          echo ====
+          ls -l /var
+          du -sh /var/*
+          echo ====
+          ls -l /mnt
+          du -sh /mnt/*
