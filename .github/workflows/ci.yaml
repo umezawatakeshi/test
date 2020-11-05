@@ -13,10 +13,12 @@ jobs:
           echo ====
           free -h
           echo ====
+          swapon
+          echo ====
           mount
           echo ====
           ls -l /
-          sudo du -xh -d1 /
+          sudo du -xh -d1 --exclude=/usr --exclude=/var /
           #echo ====
           #ls -l /var
           #sudo du -xh -d1 /var
