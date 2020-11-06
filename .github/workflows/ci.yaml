@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - run: |
+          echo Show bootup environment
+          echo ====
           df -h
           echo ====
           free -h
@@ -22,6 +24,28 @@ jobs:
           #echo ====
           #ls -l /var
           #sudo du -xh -d1 /var
+          echo ====
+          ls -l /mnt
+          sudo du -xh -d1 /mnt
+      - run: |
+          echo Try to swapoff
+          echo ====
+          swapon > swapon.txt
+          sudo swapoff -a
+          cat swapon.txt | tail -n+2 | awk '$2=="file" {print $1}' | sudo xargs --no-run-if-empty rm
+      - run: |
+          echo Show environment after swapoff
+          echo ====
+          df -h
+          echo ====
+          free -h
+          echo ====
+          swapon
+          echo ====
+          mount
+          echo ====
+          ls -l /
+          sudo du -xh -d1 --exclude=/usr --exclude=/var /
           echo ====
           ls -l /mnt
           sudo du -xh -d1 /mnt
