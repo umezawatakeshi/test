@@ -27,6 +27,8 @@ jobs:
           echo ====
           ls -l /mnt
           sudo du -xh -d1 /mnt
+          echo ====
+          cat /mnt/DATALOSS_WARNING_README.txt
       - run: |
           echo Try to swapoff
           echo ====
